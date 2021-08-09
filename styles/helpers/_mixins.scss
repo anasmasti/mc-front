@@ -1,0 +1,23 @@
+@use "./variables";
+@use "./functions" as *;
+
+// Launch mobile media dynamicly
+@mixin mobile($min-screen, $max-screen) {
+    @media only screen and (min-width: $min-screen) and (max-width: $max-screen) {
+        @content;
+    }
+}
+
+// Global transition
+@mixin global-transition {
+    transition: 0.3s all;
+}
+
+// // Check if background color dark or light and put adaptive font color
+// @mixin text-light-color($light-theme) {
+//     @if $light-theme {
+//         color: color(light) !important;
+//     } @else {
+//         color: color(dark) !important;
+//     }
+// }

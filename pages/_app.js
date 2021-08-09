@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
+import 'tailwindcss/tailwind.css'
+import MainLayout from '../layouts/MainLayout'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MCApp({ Component, pageProps }) {
+  return (
+    <MainLayout>
+      <Component {...pageProps} />
+    </MainLayout>
+  )
 }
 
-export default MyApp
+export default MCApp
