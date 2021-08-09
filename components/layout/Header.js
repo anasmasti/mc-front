@@ -64,7 +64,7 @@ const NavBar = () => {
                         <Link href="#">
                             <a>
                                 <span className="sr-only">M&C</span>
-                                <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" />
+                                <h1><strong>M&C</strong></h1>
                             </a>
                         </Link>
                     </div>
