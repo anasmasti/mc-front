@@ -9,7 +9,7 @@ export default function Home() {
         <div className='col-12 col-lg-6'>
           <div>
             <h1>
-              Qualité Rapidité Fluidité
+              M&C Cotton
             </h1>
             <p>
               Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
