@@ -1,13 +1,18 @@
-
 import Link from "next/link"
 import homeStyle from '../styles/pages/Home.module.scss';
+import Slider from "../components/Slider/Slider";
 
 export default function Home() {
+
+
   return (
     <div className={[homeStyle.home_section, 'flex', 'justify-content-start', 'align-items-center', 'h-100'].join(' ')}>
       <div className='row'>
         <div className='col-12 col-lg-6'>
-          <div>
+
+            <Slider />
+
+
             <h1>
               M&C Cotton
             </h1>
@@ -31,7 +36,5 @@ export default function Home() {
 
         </div>
       </div>
-    </div>
-
   )
 }
