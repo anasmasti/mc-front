@@ -165,12 +165,12 @@ const NavBar = () => {
 
                     </nav>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <Link href="#">
+                        <Link href="/login">
                             <a className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                                 S'identifier
                             </a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/signup">
                             <a className="ml-5 flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-2  rounded-full tracking-wide font-semibold  shadow cursor-pointer transition ease-in duration-500">
                                 S'inscrire
                             </a>
