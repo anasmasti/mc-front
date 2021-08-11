@@ -78,4 +78,45 @@
     // background: rgb(255, 255, 255);
     cursor: pointer;
   }
-  
+  .card{
+    padding: 1rem ;
+    border-radius: 12px;
+    margin: 0.5rem;
+    
+    // background-color: red;
+  }
+  .cardBody{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    
+
+  }
+  .cardsContainer{
+    width: 90%;
+  }
+  .image{
+    position: relative;
+    bottom: 0;
+    // background-color: green;
+    align-items: center;
+  }
+  .ImageContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: end;
+  }
+  .Title{
+    // padding: 5rem;
+    height: 200%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+  }
