@@ -4,7 +4,7 @@ import AuthLayout from '../../layouts/AuthLayout'
 const Login = () => {
   return (
     <AuthLayout>
-      <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full w-2/5 xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+      <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <h2 className="mt-6 text-3xl font-bold text-gray-900">
@@ -23,7 +23,7 @@ const Login = () => {
               </div>
               <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
               <input
-                className=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
                 type="" placeholder="mail@gmail.com" />
             </div>
             <div className="mt-8 content-center">
@@ -43,21 +43,21 @@ const Login = () => {
                 </label>
               </div>
               <div className="text-sm">
-                <a href="#" className="text-indigo-400 hover:text-blue-500">
+                <a href="#" className="text-blue-500">
                   Mot de passe oublié?
                 </a>
               </div>
             </div>
             <div>
               <button type="submit"
-                className="w-full flex mt-8 justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                className="w-full main-btn">
                 S'identifier
               </button>
             </div>
             <p className="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
-              <span>Vous n'avez pas de compte ??</span>
+              <span>Vous n'avez pas de compte?</span>
               <a href="#"
-                className="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">S'enregistrer</a>
+                className="text-blue-500 ml-2">S'enregistrer</a>
             </p>
           </form>
         </div>

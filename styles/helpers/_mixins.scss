@@ -10,14 +10,5 @@
 
 // Global transition
 @mixin global-transition {
-    transition: 0.3s all;
+    @apply transition delay-300;
 }
-
-// // Check if background color dark or light and put adaptive font color
-// @mixin text-light-color($light-theme) {
-//     @if $light-theme {
-//         color: color(light) !important;
-//     } @else {
-//         color: color(dark) !important;
-//     }
-// }
