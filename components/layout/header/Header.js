@@ -2,6 +2,7 @@ import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import SubMenu from "./SubMenu";
 import headerStyle from "../../../styles/shared/Header.module.scss";
+import { BiShoppingBag, BiSearchAlt } from "react-icons/bi";
 
 let categories = [
   {
@@ -61,8 +62,8 @@ const NavBar = () => {
     <header>
       <div className={[headerStyle.header_box, "relative bg-white"].join(" ")}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex py-5 justify-start items-center space-x-10">
+            <div className="mr-3">
               <Link href="#">
                 <a>
                   <span className="sr-only">M&C</span>
@@ -97,7 +98,7 @@ const NavBar = () => {
                 </svg>
               </button>
             </div>
-            <nav className="hidden md:flex space-x-10">
+            <nav className="flex space-x-10">
               <Link href="/">
                 <a className="text-base font-medium text-gray-500 hover:text-gray-900">
                   Accueil
@@ -106,7 +107,7 @@ const NavBar = () => {
 
               <SubMenu categories={categories} callsToAction={callsToAction} />
 
-              <Link href="#">
+              <Link href="/products-list">
                 <a className="text-base font-medium text-gray-500 hover:text-gray-900">
                   Produits
                 </a>
@@ -124,7 +125,17 @@ const NavBar = () => {
                 </a>
               </Link>
               <Link href="/signup">
-                <a className="main-btn ml-3">S'inscrire</a>
+                <a className="main-btn ml-4">Crée un compte</a>
+              </Link>
+              <Link href="/card">
+                <a className="text-xl ml-14">
+                  <BiShoppingBag />
+                </a>
+              </Link>
+              <Link href="#">
+                <a className="ml-4 text-xl">
+                  <BiSearchAlt />
+                </a>
               </Link>
             </div>
           </div>
