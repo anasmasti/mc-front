@@ -78,30 +78,71 @@
     // background: rgb(255, 255, 255);
     cursor: pointer;
   }
+  
+
+
+
+  //::::::::::::::::::::::::::::::::::::: Ctegories ::::::::::::::::::::::::::::::::::::: 
+
   .card{
     padding: 1rem ;
-    border-radius: 12px;
+    border-radius: 7px;
     margin: 0.5rem;
-    
-    // background-color: red;
+    cursor: pointer;
+    position: relative;
   }
-  .cardBody{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    text-align: center;
-    
-
+  
+  .cardWomen{
+    border-radius: 7px;
+    margin: 0.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+  .cardMen{
+    border-radius: 7px;
+    margin: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    padding-left:  10rem ;
+    padding-right: 10rem ;
   }
   .cardsContainer{
     width: 90%;
   }
   .image{
-    position: relative;
+    padding-left: 1rem;
+  }
+  .imageKid{
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+  }
+  .TitleKid{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    color: white;
+  }
+  .TitleWomen{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: underline;
+    color: white;
+    position: absolute;
     bottom: 0;
-    // background-color: green;
-    align-items: center;
+  }
+  .TitleMen{
+    width: 20%;
+    font-size: 25px;
+    text-decoration: underline;
+    color: white;
   }
   .ImageContainer{
     width: 50%;
@@ -111,12 +152,47 @@
     text-align: end;
   }
   .Title{
-    // padding: 5rem;
-    height: 200%;
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+    font-size: 25px;
+    text-decoration: underline;
+    color: white;
+  }
+
+  @media (max-width: 850px) {
+
+    .cardsContainer{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ImageCategorie{
+      
+      // display: none;
+      // visibility: hidden;
+      // opacity: 0;
+      position: absolute;
+      bottom: 100px;
+
+    }
+
+    .card , .cardWomen , .cardMen {
+
+      padding: 0;
+      height: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+
+    .TitleWomen , .TitleKid , .TitleMen , .Title {
+      width: 100%;
+      height: 100%;
+      background-color: red;
+    }
+  
   }

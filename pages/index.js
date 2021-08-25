@@ -8,61 +8,63 @@ export default function Home() {
 
 
   return (
-    <div className={[homeStyle.home_section, 'flex', 'justify-content-start', 'align-items-center', 'h-100'].join(' ')}>
-      <div className='row'>
+    <div className={[homeStyle.home_section, 'flex', 'justify-content-start', 'align-items-center', 'h-100' ].join(' ')}>
+      <div className='row w-full'>
         <div className='col-12 col-lg-6'>
 
             <Slider />
 
+
+            {/* Categories */}
             <div className={"grid grid-rows-4 grid-flow-col gap-4 my-20 mx-auto " + sliderStyle.cardsContainer}>
-              <div className={"row-span-3  bg-red-600 " + sliderStyle.card }>
-1
-              </div>
-              <div className={"col-span-3  bg-red-600 " + sliderStyle.card}>
 
-              </div>
-              <div className={"row-span-2 col-span-2  bg-red-600 " + sliderStyle.card }>
+                {/* Women */}
+                <div className={"row-span-3  bg-indigo-300  " + sliderStyle.cardWomen }>
+                    <div className={"w-full h-full text-center  " }>
 
-              </div>
-              {/* <div className={"col-span-2  bg-red-600 grid grid-rows-1  " + sliderStyle.card }>
+                      <Image src="/Imgs/Women-removebg.png" className={ sliderStyle.ImageCategorie + " hidden" } width={200} height={350} />
+                      <strong className={ "float-right mx-auto  text-center " + sliderStyle.TitleWomen }>Femmes</strong>
 
-                <div className={ "  bg-green-600 " }>
-                  
-                  <Image src="/Imgs/baby.png" className={sliderStyle.image} width={300} height={200} />
-
-                  <h5 className={ "float-right bg-green-800 " + sliderStyle.Title }>Bébés</h5>
-
+                    </div>
                 </div>
 
-                {/* <img src="../public/Imgs/baby.png" /> 
+                {/* Men */}
+                <div className={"col-span-3  bg-indigo-500 " + sliderStyle.cardMen}>
+                    <div className={"w-full h-full text-center flex justify-between " }>
 
-              </div> */}
+                      <Image src="/Imgs/Men.png" className={ sliderStyle.ImageCategorie } width={250} height={250} />
+                      <strong className={ "float-right my-auto text-center  " + sliderStyle.TitleMen }>Hommes</strong>
 
-              <div className={ "col-span-2  bg-blue-400 " + sliderStyle.card }>
-
-                <div className={sliderStyle.cardBody }>
-                  
-                  <Image src="/Imgs/baby.png" className={ sliderStyle.image} width={300} height={200} />
-
-                  <h5 className={ "float-right my-auto " + sliderStyle.Title }>Bébés</h5>
-
+                    </div>
                 </div>
 
-                {/* <img src="../public/Imgs/baby.png" /> */}
+                {/* Kid */}
+                <div className={"row-span-2 col-span-2  bg-blue-200   " + sliderStyle.card }>
+                  
+                  <div className={" pl-5 h-full " }>
+
+                    <Image src="/Imgs/children.png" className={sliderStyle.imageKid + " " + sliderStyle.ImageCategorie} width={350} height={300} />
+                    <strong className={ "float-right my-auto pb-40 absolute bottom-0 right-0 " + sliderStyle.TitleKid }>Enfants</strong>
+
+                  </div>
+
+                </div>
+                
+                {/* Baby */}
+                <div className={ "col-span-2  bg-blue-400 " + sliderStyle.card }>
+
+                <div className={ "w-full h-full text-center flex justify-between pl-20" }>
+                  
+                  <Image src="/Imgs/baby.png" className={ sliderStyle.ImageCategorie } width={300} height={200} />
+
+                  <strong className={ "float-right my-auto " + sliderStyle.Title }>Bébés</strong>
+
+                </div>
 
               </div>
 
             </div>
 
-
-            <h1>
-              M&C Cotton
-            </h1>
-            <p>
-              Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-              Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
-              ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-            </p>
           </div>
           <div className={homeStyle.btns_section}>
             <Link href='/contact'>
@@ -73,9 +75,6 @@ export default function Home() {
               </a>
             </Link>
           </div>
-        </div>
-        <div className='col-12 col-lg-6'>
-
         </div>
       </div>
   )
