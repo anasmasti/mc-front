@@ -2,10 +2,10 @@ import React from 'react';
 import AuthLayout from '../../layouts/AuthLayout'
 
 
-const Signup = () => {
+const SignUp = () => {
     return (
         <AuthLayout>
-            <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full w-2/5 xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+            <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
                 <div className="max-w-md w-full space-y-8">
                     <div className="text-center">
                         <h2 className="mt-6 text-3xl font-bold text-gray-900">
@@ -66,14 +66,14 @@ const Signup = () => {
                         </div>
                         <div>
                             <button type="submit"
-                                className="w-full flex mt-8 justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                                className="w-full main-btn">
                                 S'enregistrer
                             </button>
                         </div>
                         <p className="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
                             <span>Vous n'avez déja un compte ?</span>
                             <a href="#"
-                                className="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">S'identifier</a>
+                                className="text-blue-500 ml-2">S'identifier</a>
                         </p>
                     </form>
                 </div>
@@ -83,4 +83,4 @@ const Signup = () => {
 };
 
 
-export default Signup;
+export default SignUp;

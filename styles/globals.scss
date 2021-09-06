@@ -1,21 +1,16 @@
 @use './components';
 @use './helpers' as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-  background-color: color(body-color);
-  overflow-x: hidden;
-  color: color(dark) !important;
-}
+@layer base {
+  html,
+  body {
+    @apply bg-gray-50 text-gray-600;
+  }
 
-a {
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  a {
+    @apply no-underline;
+  }
 }
