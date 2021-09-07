@@ -29,15 +29,6 @@ const Slider = () => {
         setSlideIndex(index)
     }
 
-    // setInterval(() => {
-    //     if(slideIndex !== dataSlider.length){
-    //         setSlideIndex(slideIndex + 1)
-    //     } 
-    //     else if (slideIndex === dataSlider.length){
-    //         setSlideIndex(1)
-    //     }
-    // }, 3000);
-
     return ( 
         <div className={ sliderStyle.containerSlider }>
             <div className="Images w-full bg-red-600">

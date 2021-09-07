@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import SubMenu from "./SubMenu";
 import headerStyle from "../../../styles/shared/Header.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { getCookie } from "../../../utils/cookie";
-import { ConnectedUser } from "../../../store/Actions/users";
-// import { BiShoppingBag, BiSearchAlt } from "react-icons/bi";
+import { BiShoppingBag, BiSearchAlt } from "react-icons/bi";
 
 let categories = [
   {
@@ -62,42 +58,13 @@ let mobileMenu = [
 ];
 
 const NavBar = () => {
-  
-let test;
-
-
-
-
-  const dispatch = useDispatch();
-  
-  let user;
-  // let html = "";
-
-  
-  
-  if (getCookie("token")) {
-
-    user = JSON.parse(localStorage.getItem("user"))
-
-    dispatch(ConnectedUser(user));
-  
-    // user = useSelector((state) => state.InfoUser);
-
-   
-    // setauthentificated(true);
-    
-}
-
   return (
     <header>
       <div className={[headerStyle.header_box, "relative bg-white"].join(" ")}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex py-5 justify-start items-center space-x-10">
-            {/* {
-              getCookie("token") ? user.nom : console.log('test2')
-            } */}
-             <div className="mr-3">
-              <Link href="/">
+            <div className="mr-3">
+              <Link href="#">
                 <a>
                   <span className="sr-only">M&C</span>
                   <h1>
@@ -150,47 +117,27 @@ let test;
                   Contact
                 </a>
               </Link>
-            </nav> 
-
-          {
-            getCookie("token") ? (
-              <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 flex space-x-10 ">
-                {/* <Link href="/signup"> */}
-                <div className="main-btn mr-4 cursor-text">
-                  Hi Mr. {user.prenom}
-                </div>
-                <Link href="/products-list">
-                  <a className="text-base font-medium text-gray-500">
-                    Deconnexion
-                  </a>
-                </Link>
-                {/* </Link> */}
-              </div>
-            ) : (
-              <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <Link href="/login">
-                  <a className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                    S'identifier
-                  </a>
-                </Link>
-                <Link href="/signup">
-                  <a className="main-btn ml-4">Crée un compte</a>
-                </Link>
-
-                <Link href="/card">
-                  <a className="text-xl ml-14">
-                    {/* <BiShoppingBag /> */}
-                    card
-                  </a>
-                </Link>
-                <Link href="#">
-                  <a className="ml-4 text-xl">{/* <BiSearchAlt /> */}#</a>
-                </Link>
-              </div>
-
-            )
-            }
-            
+            </nav>
+            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+              <Link href="/login">
+                <a className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                  S'identifier
+                </a>
+              </Link>
+              <Link href="/signup">
+                <a className="main-btn ml-4">Crée un compte</a>
+              </Link>
+              <Link href="/card">
+                <a className="text-xl ml-14">
+                  <BiShoppingBag />
+                </a>
+              </Link>
+              <Link href="#">
+                <a className="ml-4 text-xl">
+                  <BiSearchAlt />
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
         <MobileMenu mobileMenu={mobileMenu} categories={categories} />
