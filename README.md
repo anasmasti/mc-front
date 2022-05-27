@@ -1,3 +1,1 @@
-## M&C Cotton | Front-end 🚀
-
-- Development mode 
+## M&C Cotton | Front-end 
